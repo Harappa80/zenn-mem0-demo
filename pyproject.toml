@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "zenn-mem0-demo"
+version = "0.1.0"
+description = "mem0 Demo Application for Introduction on Zenn Blog"
+authors = ["Harappa80 <h.kazuki0829@gmail.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+mem0ai = "0.0.14"
+litellm = "^1.42.5"
+chromadb = "^0.5.5"
+google-generativeai = "^0.7.2"
+google-api-python-client = "^2.140.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.5.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+exclude = [".venv"]
+lint.ignore = ["F841"]
+line-length = 80
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
